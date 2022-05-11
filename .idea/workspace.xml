@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a81e272-72a5-476d-9063-7a85636ba1c0" name="Changes" comment="Dodanie javafx">
+    <list default="true" id="4a81e272-72a5-476d-9063-7a85636ba1c0" name="Changes" comment="Dodanie przyciskow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/HelloApplication.java" afterDir="false" />
     </list>
@@ -58,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652266161480</updated>
-      <workItem from="1652266163261" duration="364000" />
+      <workItem from="1652266163261" duration="3358000" />
     </task>
     <task id="LOCAL-00001" summary="Dodanie javafx">
       <created>1652266225923</created>
@@ -74,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652266253888</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dodanie przyciskow">
+      <created>1652266569167</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652266569167</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dodanie javafx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie javafx" />
+    <MESSAGE value="Dodanie przyciskow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie przyciskow" />
   </component>
 </project>
