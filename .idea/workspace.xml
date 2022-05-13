@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a81e272-72a5-476d-9063-7a85636ba1c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Navbar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Plansza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAPER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SAPER.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Plansza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Plansza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Pole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Pole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/saper/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/saper/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -89,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652266161480</updated>
       <workItem from="1652266163261" duration="3358000" />
+      <workItem from="1652424584500" duration="3893000" />
     </task>
     <task id="LOCAL-00001" summary="Dodanie javafx">
       <created>1652266225923</created>
