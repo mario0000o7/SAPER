@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.Random;
 
 public class HelloApplication extends Application {
-    static int Size =10;
+    static int Size = 8;
     //public static Pole[][] buttons =new Pole[8][8];
 
     @Override
@@ -28,17 +28,16 @@ public class HelloApplication extends Application {
 
 
         Navbar navbar = new Navbar();
-        BorderPane border =new BorderPane();
+        BorderPane border = new BorderPane();
         Plansza plansza = new Plansza();
         border.setTop(navbar.gridpane);
-        border.setCenter(plansza.gridpane);
+        border.setCenter(Plansza.gridpane);
         plansza.generateBombs();
-        Scene scene=new Scene(border,320,500);
+        Scene scene = new Scene(border, 256, 500);
         stage.setTitle("SAPER");
         stage.setScene(scene);
         stage.show();
     }
-
 
 
     public static void main(String[] args) {
