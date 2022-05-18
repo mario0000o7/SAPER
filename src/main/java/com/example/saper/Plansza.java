@@ -38,7 +38,7 @@ public class Plansza {
         Random random = new Random();
         for (int i = 0; i < HelloApplication.Size; i++) {
             for (int j = 0; j < HelloApplication.Size; j++) {
-                if (random.nextBoolean() && random.nextBoolean() && random.nextBoolean()) {
+                if (random.nextBoolean() && random.nextBoolean() && random.nextBoolean() && !buttons[i][j].bomba) {
                     buttons[i][j].bomba = true;
                     //buttons[i][j].button.setText("X");
                     bombs++;

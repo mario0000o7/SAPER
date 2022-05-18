@@ -33,7 +33,7 @@ public class HelloApplication extends Application {
         border.setTop(navbar.gridpane);
         border.setCenter(Plansza.gridpane);
         plansza.generateBombs();
-        Scene scene = new Scene(border, 256, 500);
+        Scene scene = new Scene(border, 256, 310);
         stage.setTitle("SAPER");
         stage.setScene(scene);
         stage.show();

@@ -8,6 +8,7 @@ public class Pole {
     boolean bomba;
     boolean checked = false;
     public Button button = new Button();
+    boolean flag;
 
     public void policzBomby(int x, int y) {
         Pole pole = Plansza.buttons[x][y];
