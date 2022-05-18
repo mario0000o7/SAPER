@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a81e272-72a5-476d-9063-7a85636ba1c0" name="Changes" comment="Add basic game logic">
+    <list default="true" id="4a81e272-72a5-476d-9063-7a85636ba1c0" name="Changes" comment="End of Sprint 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/saper/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/saper/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Plansza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Plansza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Pole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Pole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652266253888</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="End of Sprint 2">
+      <created>1652870945644</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652870945644</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dodanie javafx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie javafx" />
+    <MESSAGE value="End of Sprint 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of Sprint 2" />
   </component>
 </project>

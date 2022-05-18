@@ -1,9 +1,8 @@
 package com.example.saper;
 
 
-import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.GridPane;
 
 import java.util.Random;
@@ -22,7 +21,10 @@ public class Plansza {
                 //buttons[i][j].bomba = false;
                 int x = i;
                 int y = j;
-                buttons[i][j].button.setOnMouseClicked(mouseEvent -> sprawdz(x, y));//buttons[finalI][finalJ].setText("" + finalI + "," + finalJ));
+                buttons[i][j].button.setOnMouseClicked(mouseEvent -> {
+                    if(mouseEvent.getButton() == MouseButton.PRIMARY)
+                        sprawdz(x, y);
+                });//buttons[finalI][finalJ].setText("" + finalI + "," + finalJ));
                 buttons[i][j].button.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/background/before_click.gif"))));
                 gridpane.add(buttons[i][j].button, i, j, 1, 1);
             }
@@ -38,8 +40,8 @@ public class Plansza {
         Random random = new Random();
         for (int i = 0; i < HelloApplication.Size; i++) {
             for (int j = 0; j < HelloApplication.Size; j++) {
-                if (random.nextBoolean() && random.nextBoolean() && random.nextBoolean() && !buttons[i][j].bomba) {
-                    buttons[i][j].bomba = true;
+                if (random.nextBoolean() && random.nextBoolean() && random.nextBoolean() && random.nextBoolean() && !buttons[i][j].bomb) {
+                    buttons[i][j].bomb = true;
                     //buttons[i][j].button.setText("X");
                     bombs++;
                 }
@@ -56,7 +58,7 @@ public class Plansza {
     private void clearBombs() {
         for (int i = 0; i < HelloApplication.Size; i++) {
             for (int l = 0; l < HelloApplication.Size; l++) {
-                buttons[i][l].bomba = false;
+                buttons[i][l].bomb = false;
                 //if(buttons[i][l].button.getText().equals("X")){
                 //buttons[i][l].button.setText("");
                 //}
@@ -68,7 +70,7 @@ public class Plansza {
     private void sprawdz(int x, int y) {
         Pole aktualnePole = buttons[x][y];
         //System.out.println("FirstMove? " + firstMove);
-        if (aktualnePole.bomba && firstMove) {
+        if (aktualnePole.bomb && firstMove) {
             clearBombs();
         }
         firstMove = false;
