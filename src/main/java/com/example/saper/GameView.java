@@ -1,27 +1,14 @@
 package com.example.saper;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.HPos;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.geometry.VPos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Cell;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Random;
 
-public class HelloApplication extends Application {
+public class GameView extends Application {
     static int Size = 8;
-    //public static Pole[][] buttons =new Pole[8][8];
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -29,10 +16,10 @@ public class HelloApplication extends Application {
 
         Navbar navbar = new Navbar();
         BorderPane border = new BorderPane();
-        Plansza plansza = new Plansza();
+        Board board = new Board();
         border.setTop(navbar.gridpane);
-        border.setCenter(Plansza.gridpane);
-        plansza.generateBombs();
+        border.setCenter(Board.gridpane);
+        board.generateBombs();
         Scene scene = new Scene(border, 256, 310);
         stage.setTitle("SAPER");
         stage.setScene(scene);
