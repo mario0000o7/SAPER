@@ -5,15 +5,13 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
-import java.net.URL;
-
 public class Navbar {
     GridPane gridpane = new GridPane();
-    HBox[] boxes = new HBox[8];
-
+    public static HBox[] boxes = new HBox[8];
     public static void setHBoxGraphicBackground(HBox box, int whichDigit) {
         BackgroundImage image = new BackgroundImage(new Image(String.valueOf(Navbar.class.getResource("img/digits/" + whichDigit + ".gif"))),
                 BackgroundRepeat.NO_REPEAT,

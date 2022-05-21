@@ -22,8 +22,13 @@ public class Board {
                 int x = i;
                 int y = j;
                 buttons[i][j].button.setOnMouseClicked(mouseEvent -> {
-                    if(mouseEvent.getButton() == MouseButton.PRIMARY)
+                    if(mouseEvent.getButton() == MouseButton.PRIMARY) {
+                        if(firstMove) {
+                            new SegmentDisplayTimer();
+                            firstMove = false;
+                        }
                         check(x, y);
+                    }
                 });//buttons[finalI][finalJ].setText("" + finalI + "," + finalJ));
                 buttons[i][j].button.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/background/before_click.gif"))));
                 gridpane.add(buttons[i][j].button, i, j, 1, 1);

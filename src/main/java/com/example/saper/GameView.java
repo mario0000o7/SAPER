@@ -12,8 +12,6 @@ public class GameView extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-
-
         Navbar navbar = new Navbar();
         BorderPane border = new BorderPane();
         Board board = new Board();
