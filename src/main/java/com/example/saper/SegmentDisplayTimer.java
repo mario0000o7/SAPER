@@ -17,6 +17,9 @@ public class SegmentDisplayTimer {
                     Board.alive = true;
                     Board.firstMove = true;
                     Board.flagCount = 0;
+                    Navbar.setHBoxGraphicBackground(Navbar.boxes[5], 0);
+                    Navbar.setHBoxGraphicBackground(Navbar.boxes[4], 0);
+                    Navbar.setHBoxGraphicBackground(Navbar.boxes[3],0);
                     Board.resetFlags();
                 }
 

@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a81e272-72a5-476d-9063-7a85636ba1c0" name="Changes" comment="End of Sprint 2">
+    <list default="true" id="4a81e272-72a5-476d-9063-7a85636ba1c0" name="Changes" comment="Set statics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAPER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SAPER.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Navbar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/SegmentDisplayTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/SegmentDisplayTimer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +18,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="restart" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -69,7 +64,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameView" />
-        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
@@ -143,5 +137,16 @@
     <MESSAGE value="Scaling window" />
     <MESSAGE value="Set statics" />
     <option name="LAST_COMMIT_MESSAGE" value="Set statics" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/saper/SegmentDisplayTimer.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
