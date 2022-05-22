@@ -1,8 +1,12 @@
 package com.example.saper;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Control;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
@@ -51,6 +55,20 @@ public class Navbar {
         navbarbutton.setMinHeight(52);
         navbarbutton.setMaxHeight(52);
         navbarbutton.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/reset_button/smile.gif"))));
+        navbarbutton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                GameView.segmentDisplayTimer.setRestart(true);
+                Board.firstMove=true;
+                //GameView.navbar=new Navbar();
+                //GameView.border = new BorderPane();
+                GameView.board=new Board();
+
+                GameView.board.generateBombs();
+                //GameView.scene= new Scene(GameView.border, Control.USE_COMPUTED_SIZE, Control.USE_COMPUTED_SIZE);
+
+            }
+        });
         gridpane.add(navbarbutton, 4, 0);
         gridpane.setMinWidth(320);
         //gridpane.setHgap(12);
