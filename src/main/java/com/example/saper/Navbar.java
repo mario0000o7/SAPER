@@ -4,18 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Control;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseButton;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
 public class Navbar {
     GridPane gridpane = new GridPane();
     public static HBox[] boxes = new HBox[8];
+    public static Button navbarbutton = new Button();
     public static void setHBoxGraphicBackground(HBox box, int whichDigit) {
         BackgroundImage image = new BackgroundImage(new Image(String.valueOf(Navbar.class.getResource("img/digits/" + whichDigit + ".gif"))),
                 BackgroundRepeat.NO_REPEAT,
@@ -38,6 +36,7 @@ public class Navbar {
                 j++;
             }
         }
+        Board.setFlagDisplay(GameView.MAX_FLAGS);
         for (int i = 6, j = 3; i < 8; i++, j += 2) {
             boxes[i] = new HBox();
             boxes[i].setMinHeight(52);
@@ -49,7 +48,6 @@ public class Navbar {
                     CornerRadii.EMPTY,
                     Insets.EMPTY)));
         }
-        Button navbarbutton = new Button();
         navbarbutton.setMinWidth(52);
         navbarbutton.setMaxWidth(52);
         navbarbutton.setMinHeight(52);
@@ -63,7 +61,8 @@ public class Navbar {
                 //GameView.navbar=new Navbar();
                 //GameView.border = new BorderPane();
                 GameView.board=new Board();
-
+                Board.setFlagDisplay(GameView.MAX_FLAGS);
+                navbarbutton.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/reset_button/smile.gif"))));
                 GameView.board.generateBombs();
                 //GameView.scene= new Scene(GameView.border, Control.USE_COMPUTED_SIZE, Control.USE_COMPUTED_SIZE);
 

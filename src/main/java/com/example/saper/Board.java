@@ -13,7 +13,6 @@ public class Board {
     public static boolean firstMove = true;
     public static boolean alive = true;
     public static int flagCount = 0;
-
     public Board() {
         for (int i = 0; i < GameView.Size; i++) {
             for (int j = 0; j < GameView.Size; j++) {
@@ -37,6 +36,8 @@ public class Board {
                             flag(x, y);
                     }
                     if(checkForWin()){
+                        Navbar.navbarbutton.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/reset_button/wow.gif"))));
+                        GameView.segmentDisplayTimer.setWait(true);
                         alive = false;
                     }
                 });//buttons[finalI][finalJ].setText("" + finalI + "," + finalJ));
@@ -45,7 +46,13 @@ public class Board {
             }
         }
     }
-
+    public static void setFlagDisplay(int number) {
+        if (number < 1000) {
+            Navbar.setHBoxGraphicBackground(Navbar.boxes[2], number % 10);
+            Navbar.setHBoxGraphicBackground(Navbar.boxes[1], (number / 10) % 10);
+            Navbar.setHBoxGraphicBackground(Navbar.boxes[0], (number / 100) % 10);
+        }
+    }
     public static void resetFlags() {
         for(int i = 0; i < GameView.Size; i++){
             for(int l = 0; l < GameView.Size; l++){
@@ -82,9 +89,6 @@ public class Board {
         for (int i = 0; i < GameView.Size; i++) {
             for (int l = 0; l < GameView.Size; l++) {
                 buttons[i][l].bomb = false;
-                //if(buttons[i][l].button.getText().equals("X")){
-                //buttons[i][l].button.setText("");
-                //}
             }
         }
         generateBombs();
@@ -97,18 +101,11 @@ public class Board {
             clearBombs();
         }
         firstMove = false;
-
         if(currentField.bomb){
-            endGame(currentField);
+            endGame(x, y);
         }
         else
             currentField.countBombs(x, y);
-
-
-        /*if(currentField.bomb){
-            currentField.button.setText("X");
-        }*/
-
     }
 
     public boolean checkForWin() {
@@ -129,15 +126,21 @@ public class Board {
         return win;
     }
 
-    private void endGame(Field currentField) {
+    private void endGame(int x, int y) {
+        Navbar.navbarbutton.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/reset_button/game_over.gif"))));
         for(int i = 0; i < GameView.Size; i++){
             for(int l = 0; l < GameView.Size; l++){
-                if(buttons[i][l].bomb) {
+                if(i == x && l == y) {
                     buttons[i][l].button.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/flags/this_bomb.gif"))));
+                    continue;
+                }
+                if(buttons[i][l].bomb) {
+                    buttons[i][l].button.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/flags/other_bomb.gif"))));
                 }
             }
         }
         alive = false;
+        GameView.segmentDisplayTimer.setWait(true);
     }
 
     private void flag(int x, int y){
@@ -147,10 +150,12 @@ public class Board {
         if(buttons[x][y].flag) {
             buttons[x][y].button.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/flags/flag.gif"))));
             flagCount++;
+            setFlagDisplay(GameView.MAX_FLAGS - flagCount);
         }
         else {
             buttons[x][y].button.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/background/before_click.gif"))));
             flagCount--;
+            setFlagDisplay(GameView.MAX_FLAGS - flagCount);
         }
         if(buttons[x][y].flag) buttons[x][y].button.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/flags/flag.gif"))));
     }
