@@ -24,7 +24,7 @@ public class Board {
                 buttons[i][j].button.setOnMouseClicked(mouseEvent -> {
                     if(mouseEvent.getButton() == MouseButton.PRIMARY) {
                         if(firstMove) {
-                            new SegmentDisplayTimer();
+                            //segmentDisplayTimer=new SegmentDisplayTimer();
                             firstMove = false;
                         }
                         check(x, y);
