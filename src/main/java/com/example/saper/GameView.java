@@ -12,7 +12,8 @@ import java.util.ResourceBundle;
 
 public class GameView extends Application {
     static int Size = 20;
-    static int MAX_BOMBS = 45;
+    static int MAX_BOMBS = 4;
+    static int MAX_FLAGS = 4;
     static Board board;
     static Navbar navbar;
     static Scene scene;

@@ -14,6 +14,10 @@ public class SegmentDisplayTimer {
                 {
                     i=0;
                     restart=false;
+                    Board.alive = true;
+                    Board.firstMove = true;
+                    Board.flagCount = 0;
+                    Board.resetFlags();
                 }
 
                 if(i < 10) {

@@ -7,13 +7,16 @@ public class Field {
     boolean bomb;
     boolean checked = false;
     public Button button = new Button();
-    boolean flag;
+    boolean flag = false;
 
     public void countBombs(int x, int y) {
         Field field = Board.buttons[x][y];
         int bombCount = 0;
-        if (field.checked)
+
+        if (field.checked) {
             return;
+        }
+
         if (x > 0 && y > 0 && x < GameView.Size - 1 && y < GameView.Size - 1) {   //Inner buttons
             field.checked = true;
             if (Board.buttons[x + 1][y].bomb)
@@ -185,6 +188,12 @@ public class Field {
         } else {
             field.button.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/bombs_around/" + bombCount + ".gif"))));
         }
+
+        if(flag && field.checked){
+            Board.flagCount--;
+            flag = false;
+        }
+
         field.button.setDisable(true);
         field.button.setOpacity(1.0);
     }
