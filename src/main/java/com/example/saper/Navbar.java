@@ -37,7 +37,8 @@ public class Navbar {
         for (int i = 6, j = 3; i < 8; i++, j += 2) {
             boxes[i] = new HBox();
             boxes[i].setMinHeight(52);
-            boxes[i].setMinWidth(12);
+            int a=GameView.Size*32-6*30-52;
+            boxes[i].setMinWidth((float) a /2);
             boxes[i].setMaxWidth(12);
             gridpane.add(boxes[i], j, 0);
             boxes[i].setBackground(new Background(new BackgroundFill(Color.web("#c0c0c0"),

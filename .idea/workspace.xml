@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4a81e272-72a5-476d-9063-7a85636ba1c0" name="Changes" comment="End of Sprint 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Plansza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Plansza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Pole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Pole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/saper/Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/saper/Navbar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +31,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GameView">
+    <configuration name="GameView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.saper.GameView" />
+      <module name="SAPER" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.saper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.saper.HelloApplication" />
       <module name="SAPER" />
@@ -47,6 +60,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameView" />
         <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
@@ -60,6 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652266161480</updated>
       <workItem from="1652266163261" duration="364000" />
+      <workItem from="1653218902281" duration="607000" />
     </task>
     <task id="LOCAL-00001" summary="Dodanie javafx">
       <created>1652266225923</created>
