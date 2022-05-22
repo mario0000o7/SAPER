@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 
 public class GameView extends Application {
     static int Size = 20;
+    static int MAX_BOMBS = 45;
 
     @Override
     public void start(Stage stage) throws IOException {

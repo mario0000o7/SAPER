@@ -41,7 +41,7 @@ public class Board {
         if (bombsPlaced.length > 0) {
             bombs = bombsPlaced[0];
         }
-        int MAX_BOMBS = 10;
+
         Random random = new Random();
         for (int i = 0; i < GameView.Size; i++) {
             for (int j = 0; j < GameView.Size; j++) {
@@ -50,11 +50,11 @@ public class Board {
                     //buttons[i][j].button.setText("X");
                     bombs++;
                 }
-                if (bombs == MAX_BOMBS)
+                if (bombs == GameView.MAX_BOMBS)
                     return;
             }
         }
-        if (bombs < MAX_BOMBS) {
+        if (bombs < GameView.MAX_BOMBS) {
             generateBombs(bombs);
         }
     }
