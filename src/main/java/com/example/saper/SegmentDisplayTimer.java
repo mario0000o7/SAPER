@@ -1,28 +1,35 @@
 package com.example.saper;
 
+import java.util.Timer;
 import java.util.TimerTask;
 
 public class SegmentDisplayTimer {
-    private boolean restart=false;
+    private boolean restart = false;
     private boolean wait = false;
+    private final java.util.Timer myRepeatingTimer;
+
+    public Timer getMyRepeatingTimer() {
+        return myRepeatingTimer;
+    }
+
     SegmentDisplayTimer() {
-        java.util.Timer myRepeatingTimer = new java.util.Timer();
-        myRepeatingTimer.scheduleAtFixedRate(new TimerTask(){
+        myRepeatingTimer = new java.util.Timer();
+        myRepeatingTimer.scheduleAtFixedRate(new TimerTask() {
             int i = 0;
+
             @Override
-            public void run(){
-                if(restart)
-                {
-                    i=0;
-                    restart=false;
+            public void run() {
+                if (restart) {
+                    i = 0;
+                    restart = false;
                     wait = false;
                     Board.alive = true;
                     Board.firstMove = true;
                     Board.flagCount = 0;
                     Navbar.setHBoxGraphicBackground(Navbar.boxes[5], 0);
                     Navbar.setHBoxGraphicBackground(Navbar.boxes[4], 0);
-                    Navbar.setHBoxGraphicBackground(Navbar.boxes[3],0);
-                    Board.resetFlags();
+                    Navbar.setHBoxGraphicBackground(Navbar.boxes[3], 0);
+                    Board.resetGame();
                 }
 
                 if (i < 1000) {
@@ -42,5 +49,8 @@ public class SegmentDisplayTimer {
     public void setRestart(boolean restart) {
         this.restart = restart;
     }
-    public void setWait(boolean wait) {this.wait = true;}
+
+    public void setWait(boolean wait) {
+        this.wait = true;
+    }
 }

@@ -11,67 +11,73 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
 public class Navbar {
-    GridPane gridpane = new GridPane();
+    static final int BUTTON_SIZE = 32;
     public static HBox[] boxes = new HBox[8];
     public static Button navbarbutton = new Button();
-    public static void setHBoxGraphicBackground(HBox box, int whichDigit) {
-        BackgroundImage image = new BackgroundImage(new Image(String.valueOf(Navbar.class.getResource("img/digits/" + whichDigit + ".gif"))),
+    final int HBOX_HEIGHT = 52;
+    final int HBOX_WIDTH = 30;
+    final int NAVBAR_BUTTON = 52;
+    GridPane gridpane = new GridPane();
+
+    Navbar() {
+        for (int i = 0, j = 0; i < 6; i++) {
+            boxes[i] = new HBox();
+            boxes[i].setMinHeight(HBOX_HEIGHT);
+            boxes[i].setMinWidth(HBOX_WIDTH);
+            boxes[i].setMaxWidth(HBOX_WIDTH);
+            gridpane.add(boxes[i], j, 0);
+            setHBoxGraphicBackground(boxes[i], 0);
+            if (j == 2) {
+                j += 4;
+            } else {
+                j++;
+            }
+        }
+        setFlagDisplay(GameView.MAX_FLAGS);
+        for (int i = 6, j = 3; i < 8; i++, j += 2) {
+            boxes[i] = new HBox();
+            boxes[i].setMinHeight(HBOX_HEIGHT);
+            int a = GameView.SIZE * BUTTON_SIZE - 6 * HBOX_WIDTH - NAVBAR_BUTTON;
+            boxes[i].setMinWidth((float) a / 2);
+            gridpane.add(boxes[i], j, 0);
+            boxes[i].setBackground(new Background(new BackgroundFill(Color.web("#c0c0c0"),
+                    CornerRadii.EMPTY,
+                    Insets.EMPTY)));
+        }
+        navbarbutton.setMinWidth(NAVBAR_BUTTON);
+        navbarbutton.setMaxWidth(NAVBAR_BUTTON);
+        navbarbutton.setMinHeight(NAVBAR_BUTTON);
+        navbarbutton.setMaxHeight(NAVBAR_BUTTON);
+        navbarbutton.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/reset_button/smile.gif"))));
+        navbarbutton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                GameView.getSegmentDisplayTimer().setRestart(true);
+                Board.firstMove = true;
+                GameView.setBoard(new Board());
+                setFlagDisplay(GameView.MAX_FLAGS);
+                navbarbutton.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/reset_button/smile.gif"))));
+                Board.generateBombs();
+            }
+        });
+        gridpane.add(navbarbutton, 4, 0);
+        gridpane.setAlignment(Pos.BASELINE_LEFT);
+    }
+
+    public static void setHBoxGraphicBackground(HBox box, int whichSegmentDigit) {
+        BackgroundImage image = new BackgroundImage(new Image(String.valueOf(Navbar.class.getResource("img/digits/" + whichSegmentDigit + ".gif"))),
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
                 BackgroundSize.DEFAULT);
         box.setBackground(new Background(image));
     }
-    Navbar() {
-        for (int i = 0, j = 0; i < 6; i++) {
-            boxes[i] = new HBox();
-            boxes[i].setMinHeight(52);
-            boxes[i].setMinWidth(30);
-            boxes[i].setMaxWidth(30);
-            gridpane.add(boxes[i], j, 0);
-            setHBoxGraphicBackground(boxes[i], 0);
-            if(j == 2) {
-                j += 4;
-            } else {
-                j++;
-            }
-        }
-        Board.setFlagDisplay(GameView.MAX_FLAGS);
-        for (int i = 6, j = 3; i < 8; i++, j += 2) {
-            boxes[i] = new HBox();
-            boxes[i].setMinHeight(52);
-            int a=GameView.Size*32-6*30-52;
-            boxes[i].setMinWidth((float) a /2);
-            boxes[i].setMaxWidth(12);
-            gridpane.add(boxes[i], j, 0);
-            boxes[i].setBackground(new Background(new BackgroundFill(Color.web("#c0c0c0"),
-                    CornerRadii.EMPTY,
-                    Insets.EMPTY)));
-        }
-        navbarbutton.setMinWidth(52);
-        navbarbutton.setMaxWidth(52);
-        navbarbutton.setMinHeight(52);
-        navbarbutton.setMaxHeight(52);
-        navbarbutton.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/reset_button/smile.gif"))));
-        navbarbutton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                GameView.segmentDisplayTimer.setRestart(true);
-                Board.firstMove=true;
-                //GameView.navbar=new Navbar();
-                //GameView.border = new BorderPane();
-                GameView.board=new Board();
-                Board.setFlagDisplay(GameView.MAX_FLAGS);
-                navbarbutton.setGraphic(new ImageView(String.valueOf(getClass().getResource("img/reset_button/smile.gif"))));
-                GameView.board.generateBombs();
-                //GameView.scene= new Scene(GameView.border, Control.USE_COMPUTED_SIZE, Control.USE_COMPUTED_SIZE);
 
-            }
-        });
-        gridpane.add(navbarbutton, 4, 0);
-        gridpane.setMinWidth(320);
-        //gridpane.setHgap(12);
-        gridpane.setAlignment(Pos.BASELINE_LEFT);
-        gridpane.setBackground(new Background(new BackgroundFill(Color.YELLOW, CornerRadii.EMPTY, Insets.EMPTY)));
+    public static void setFlagDisplay(int number) {
+        if (number < 1000) {
+            setHBoxGraphicBackground(boxes[2], number % 10);
+            setHBoxGraphicBackground(boxes[1], (number / 10) % 10);
+            setHBoxGraphicBackground(boxes[0], (number / 100) % 10);
+        }
     }
 }
