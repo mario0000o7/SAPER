@@ -9,8 +9,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class GameView extends Application {
-    final static int SIZE = 8;
-    final static int MAX_BOMBS = 25;
+    final static int SIZE = 20;
+    final static double BOMB_FILL_PERCENTAGE = 20;
+    final static int MAX_BOMBS = Math.toIntExact(Math.round(SIZE * SIZE * BOMB_FILL_PERCENTAGE/100));
     final static int MAX_FLAGS = MAX_BOMBS;
     final String TITLE = "SAPER";
     private static Board board;
